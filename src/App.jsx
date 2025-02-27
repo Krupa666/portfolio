@@ -1,20 +1,21 @@
 import React, { useState } from "react";
-import { Navbar } from "./components/Navbar/Navbar";
-import { Hero } from "./components/Hero/Hero";
+import styles from "./App.module.css";
 import { About } from "./components/About/About";
-import { Experience } from "./components/Experience/Experience";
-import { Education } from "./components/Hero/Education";// Corrected Path
-import { Projects } from "./components/Projects/Projects";
 import { Contact } from "./components/Contact/Contact";
-
+import { Experience } from "./components/Experience/Experience";
+import { Hero } from "./components/Hero/Hero";
+import { Navbar } from "./components/Navbar/Navbar";
+import { Education } from "./components/Hero/Education";
+import { Projects } from "./components/Projects/Projects";
 import excelr from './components/cert/excelr.jpg';
 import de from './components/cert/aws.png';
 import cloud from './components/cert/aws2.jpg';
+ 
 // Modal Component
 const ImageModal = ({ image, onClose }) => {
   return (
     <div style={modalStyles}>
-      <span onClick={onClose} style={closeButtonStyles}>X</span>
+      <span onClick={onClose} style={closeButtonStyles}></span>
       <img src={image} alt="Certification" style={modalImageStyles} />
     </div>
   );
@@ -27,23 +28,24 @@ const Certifications = () => {
 
   const certifications = [
     {
-      title: "DataScience & ML",
-      issuer: "Excelr",
-      date: "August 2024",
-      image: excelr,
+      title: 'DataScience & ML',
+      issuer: 'Excelr',
+      date: 'August 2024',
+      image: excelr, // Adjust the path as needed
     },
     {
-      title: "AWS Cloud",
-      issuer: "AWS Academy",
-      date: "March 2024",
+      title: 'AWS Cloud ',
+      issuer: 'AWS Academy',
+      date: 'March 2024',
       image: cloud,
     },
     {
-      title: "Data Engineering Certification",
-      issuer: "AWS Academy",
-      date: "July 2024",
-      image: de,
+      title: 'Data Engineering Certification',
+      issuer: 'AWS Academy',
+      date: 'July 2024',
+      image: de, // Adjust the path as needed
     },
+    // Add more certifications as needed
   ];
 
   const openModal = (image) => {
@@ -102,14 +104,15 @@ const Certifications = () => {
 // Main App Component
 function App() {
   return (
-    <div>
+    <div className={styles.App}>
       <Navbar />
       <Hero />
       <About />
-      <Projects />
-      <Certifications />
       <Experience />
-      <Education />
+      <Education /> 
+      <Projects />  
+      <Certifications /> 
+      
       <Contact />
     </div>
   );
@@ -117,30 +120,30 @@ function App() {
 
 // Styles for the modal
 const modalStyles = {
-  position: "fixed",
+  position: 'fixed',
   top: 0,
   left: 0,
   right: 0,
   bottom: 0,
-  backgroundColor: "rgba(0, 0, 0, 0.8)",
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
+  backgroundColor: 'rgba(0, 0, 0, 0.8)',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
   zIndex: 1000,
 };
 
 const modalImageStyles = {
-  maxWidth: "90%",
-  maxHeight: "90%",
+  maxWidth: '90%',
+  maxHeight: '90%',
 };
 
 const closeButtonStyles = {
-  position: "absolute",
-  top: "20px",
-  right: "30px",
-  color: "white",
-  fontSize: "24px",
-  cursor: "pointer",
+  position: 'absolute',
+  top: '20px',
+  right: '30px',
+  color: 'white',
+  fontSize: '24px',
+  cursor: 'pointer',
 };
 
 export default App;
