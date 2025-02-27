@@ -9,7 +9,7 @@ export const About = () => {
       <h2 className={styles.title}>About</h2>
       <div className={styles.content}>
         <img
-          src={getImageUrl("about/aboutImage.png")}
+          src={getImageUrl("about/abiut.png")}
           alt="Me sitting with a laptop"
           className={styles.aboutImage}
         />
@@ -17,32 +17,16 @@ export const About = () => {
           <li className={styles.aboutItem}>
             <img src={getImageUrl("about/cursorIcon.png")} alt="Cursor icon" />
             <div className={styles.aboutItemText}>
-              <h3>Frontend Developer</h3>
+              <h1>About Me</h1><br></br>
               <p>
-                I'm a frontend developer with experience in building responsive
-                and optimized sites
+                I'm Krupa Rakshan, an IT fresher and aspiring web developer with
+                
+                
+                 a passion for coding and building interactive web applications.
               </p>
-            </div>
-          </li>
-          <li className={styles.aboutItem}>
-            <img src={getImageUrl("about/serverIcon.png")} alt="Server icon" />
-            <div className={styles.aboutItemText}>
-              <h3>Backend Developer</h3>
-              <p>
-                I have experience developing fast and optimised back-end systems
-                and APIs
-              </p>
-            </div>
-          </li>
-          <li className={styles.aboutItem}>
-            <img src={getImageUrl("about/cursorIcon.png")} alt="UI icon" />
-            <div className={styles.aboutItemText}>
-              <h3>UI Designer</h3>
-              <p>
-                I have designed multiple landing pages and have created design
-                systems as well
-              </p>
-            </div>
+              <p> I specialize in front-end development with React and have a keen interest in mastering full-stack technologies.  </p>
+              <p>My goal is to contribute to impactful web solutions while growing as a developer. </p>
+                </div>
           </li>
         </ul>
       </div>

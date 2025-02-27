@@ -2,22 +2,23 @@ import React from "react";
 
 import styles from "./Hero.module.css";
 import { getImageUrl } from "../../utils";
+import TextChange from "./TextChange";
 
 export const Hero = () => {
   return (
     <section className={styles.container}>
       <div className={styles.content}>
-        <h1 className={styles.title}>Hi, I'm Ada</h1>
+        <h1 className={styles.title}><TextChange/></h1>
         <p className={styles.description}>
-          I'm a full-stack developer with 5 years of experience using React and
-          NodeJS. Reach out if you'd like to learn more!
+        Iam a Student of Btech with high curiosity in developing my self in every field
+
         </p>
-        <a href="mailto:myemail@email.com" className={styles.contactBtn}>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=krupa.nkr6@gmail.com" className={styles.contactBtn}>
           Contact Me
         </a>
       </div>
       <img
-        src={getImageUrl("hero/heroImage.png")}
+        src={getImageUrl("hero/myhero.png")}
         alt="Hero image of me"
         className={styles.heroImg}
       />
