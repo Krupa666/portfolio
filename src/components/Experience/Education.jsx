@@ -1,7 +1,7 @@
 import React from "react";
 
 export const Education = () => {
-  const Education = [
+  const educationData = [
     {
       degree: "Bachelor of Technology in Information Technology",
       institution: "Sasi Institute of Technology and Engineering",
@@ -25,11 +25,11 @@ export const Education = () => {
   const styles = {
     container: {
       padding: "2rem",
-      backgroundColor: "#c98763", // Light gray background
+      backgroundColor: "#c98763", // Light brown background
       display: "flex",
       flexDirection: "column",
-      alignItems: "center", // Center horizontally
-      justifyContent: "center", // Center vertically
+      alignItems: "center",
+      justifyContent: "center",
       minHeight: "100vh", // Full viewport height
     },
     title: {
@@ -37,9 +37,9 @@ export const Education = () => {
       fontWeight: "bold",
       textAlign: "center",
       marginBottom: "2rem",
-      color: "#fff", // Darker gray for the title
+      color: "#fff", // White color for the title
     },
-    education: {
+    educationList: {
       width: "100%",
       maxWidth: "800px", // Restrict content width
       display: "flex",
@@ -47,7 +47,7 @@ export const Education = () => {
       gap: "2rem", // Space between cards
     },
     card: {
-      backgroundColor: "rgba(12, 12, 12, 0.6)", // White background for cards
+      backgroundColor: "rgba(12, 12, 12, 0.6)", // Dark transparent background
       borderRadius: "1rem", // Rounded corners
       boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)", // Subtle shadow
       padding: "1.5rem",
@@ -75,7 +75,7 @@ export const Education = () => {
     },
     description: {
       fontSize: "1rem",
-      color: "#7f8c8d", // Same dark gray as before
+      color: "#7f8c8d", // Same muted gray
       lineHeight: "1.5",
       marginTop: "0.5rem",
     },
@@ -89,9 +89,9 @@ export const Education = () => {
   return (
     <section style={styles.container} id="Education">
       <h2 style={styles.title}>Education</h2>
-      <div style={styles.education}>
+      <div style={styles.educationList}>
         <ul>
-          {Education.map((edu, index) => (
+          {educationData.map((edu, index) => (
             <li
               key={index}
               style={styles.card}
