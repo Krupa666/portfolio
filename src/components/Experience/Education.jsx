@@ -1,7 +1,7 @@
 import React from "react";
 
 export const Education = () => {
-  const education = [
+  const Education = [
     {
       degree: "Bachelor of Technology in Information Technology",
       institution: "Sasi Institute of Technology and Engineering",
@@ -87,11 +87,11 @@ export const Education = () => {
   };
 
   return (
-    <section style={styles.container} id="education">
+    <section style={styles.container} id="Education">
       <h2 style={styles.title}>Education</h2>
       <div style={styles.education}>
         <ul>
-          {education.map((edu, index) => (
+          {Education.map((edu, index) => (
             <li
               key={index}
               style={styles.card}
